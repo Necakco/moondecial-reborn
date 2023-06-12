@@ -105,3 +105,6 @@ html[data-theme='dark'] {
   transition: background-color 400ms ease-in-out, fill 400ms ease-in-out;
 }
 
+.logonho {
+  max-width: 200px;
+}

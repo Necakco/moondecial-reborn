@@ -12,19 +12,22 @@ function HomepageHeader() {
   return (
     <header className="heroBanner">
       <div className="container">
-        <img id="minallogo" src="./img/logo.png"></img>
+        <center>
+
+        <img className="logonho" src="./img/logo.png"></img>
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--secondary button--ifm-color-primary-light"
             to="/docs/intro"
-          >
-            Docusaurus Tutorial - 5min ⏱️
+            >
+            Start Learning NOW 😉
           </Link>
         </div>
         <br></br>
         <p>Im better </p>
+            </center>
       </div>
     </header>
   );

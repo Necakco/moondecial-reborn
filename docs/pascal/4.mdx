@@ -3,3 +3,34 @@ sidebar_position: 4
 ---
 
 # Arrays
+mảng Pascal
+
+## I.Mảng là Gì
+Mảng là một kiểu dữ liệu cơ bản trong Pascal, cho phép lưu trữ một tập hợp các giá trị cùng kiểu dữ liệu trong một vùng nhớ liên tiếp. Mảng được định nghĩa bằng cách xác định kiểu dữ liệu của các phần tử trong mảng, kích thước của mảng và chỉ số của các phần tử.
+
+Trong Pascal, các phần tử trong mảng được đánh số bắt đầu từ số 0 hoặc số 1, tùy thuộc vào quy định của ngôn ngữ được sử dụng. Khi khai báo một mảng, ta cần chỉ định kiểu dữ liệu của các phần tử, kích thước của mảng và chỉ số bắt đầu (nếu có).
+
+## II.Khai Báo Mảng
+Cú pháp khai báo mảng trong Pascal như sau:
+```
+var
+  array_name: array[start_index..end_index] of data_type;
+```
+Trong đó:
++ array_name là tên của mảng.
++ start_index và end_index là chỉ số bắt đầu và kết thúc của mảng.
++ data_type là kiểu dữ liệu của các phần tử trong mảng.
+
+Ví dụ, để khai báo một mảng có 5 phần tử kiểu số nguyên, ta có thể sử dụng cú pháp như sau:
+```
+var
+  numbers: array[0..4] of integer;
+```
+## III. Thao tác với mảng
+Trong Pascal, các phần tử trong mảng có thể được truy cập và thay đổi giá trị bằng cách sử dụng chỉ số của phần tử đó trong dấu ngoặc vuông []. Ví dụ:
+```
+numbers[0] := 10; // gán giá trị 10 cho phần tử đầu tiên của mảng
+writeln(numbers[3]); // in ra giá trị của phần tử thứ 4 trong mảng
+```
+
+Ngoài ra, trong Pascal cũng hỗ trợ một số thao tác trên mảng như tìm kiếm phần tử lớn nhất, nhỏ nhất, tính tổng các phần tử, sắp xếp mảng theo thứ tự tăng hoặc giảm dần, và nhiều thao tác khác nữa. 

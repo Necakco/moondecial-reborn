@@ -107,17 +107,21 @@ const config = {
                 label: "Tutorial",
                 to: "/docs/intro",
               },
+              {
+                label: "MoonDecial OLDver",
+                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              },
             ],
           },
           {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
+                label: "Facebook",
                 href: "https://stackoverflow.com/questions/tagged/docusaurus",
               },
               {
-                label: "Discord",
+                label: "Kchat",
                 href: "https://discordapp.com/invite/docusaurus",
               },
               {
@@ -134,7 +138,11 @@ const config = {
                 to: "/blog",
               },
               {
-                label: "GitHub",
+                label: "Blogv2",
+                href: "https://github.com/facebook/docusaurus",
+              },
+              {
+                label: "Discord",
                 href: "https://github.com/facebook/docusaurus",
               },
             ],

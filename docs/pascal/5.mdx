@@ -3,3 +3,154 @@ sidebar_position: 5
 ---
 
 # String
+String Pascal
+
+## I. KHAI BÁO KIỂU STRING
+```
+var <Tên Xâu> : string;
+```
+## II. TRUY XUẤT DỮ LIỆU KIỂU STRING
+- Có thể sử dụng các thủ tục xuất nhập Write, Writeln, Readln để truy xuất các biến kiểu String.
+- Để truy xuất đến ký tự thứ k của xâu ký tự, ta sử dụng cú pháp sau: Tênbiến[k].
+## III. CÁC PHÉP TOÁN TRÊN XÂU KÝ TỰ
+:::info
+Phép nối xâu:   +
+:::
+Ví dụ
+```
+s := s1 + s2 ;
+```
+	
+trong đó s1,s,s2 là xâu cho trước 
+
+
+
+```
+s1 := 'xin chao' ;
+s2 := 'cac ban';
+s:= s1+s2;
+// s = 'xin chao cac ban';
+```
+
+Các phép toán quan hệ: 
+``` =, <>, <, <=, >, >=. ```
+:::info
+Chú ý: Các phép toán quan hệ được so sánh theo thứ tự từ điển.
+:::
+## IV. CÁC THỦ TỤC VÀ HÀM
+### 1. Hàm lấy chiều dài của xâu ký tự
+:::tip Ghi nhớ
+LENGTH(St : String):Integer;
+:::
+```
+uses crt;
+var s:string;
+begin
+	clrscr;
+	writeln('Nhap xau : ');readln(s);
+	writeln(length(s));
+readln
+end.
+```
+
+Kết quả in ra
+```
+Nhap xau :
+khoa
+4
+```
+### 2. Hàm COPY(St : String; Pos, Num: Byte): String;
+```
+uses crt;
+var s,s1:string;
+begin
+	clrscr;
+	writeln('Nhap xau : ');readln(s);
+	s1 := copy(s,2,4);
+	writeln(s1);
+readln
+end.
+```
+
+kết quả
+```
+Nhap xau :
+1234
+234
+```
+Lấy ra một xâu con từ trong xâu St có độ dài Num ký tự bắt đầu từ vị trí Pos .
+### 3. Hàm POS(SubSt, St :String):Byte;
+```
+uses crt;
+var s:string;
+begin
+	clrscr;
+	writeln('Nhap xau : ');readln(s);
+	writeln(pos('k',s));
+readln
+end.
+```
+
+```
+Nhap xau :
+kkhoa
+1
+```
+
+```
+Nhap xau :
+hoa
+0
+```
+Kiểm tra xâu con SubSt có nằm trong xâu St hay không? Nếu xâu SubSt nằm trong xâu St thì hàm trả về vị trí đầu tiên của xâu con SubSt trong xâu St, ngược lại hàm trả về giá trị 0.
+### 4. Thủ tục DELETE(Var St:String; Pos, Num: Byte);
+```
+uses crt;
+var s:string;
+begin
+	clrscr;
+	writeln('Nhap xau : ');readln(s);
+	delete(s,2,3);
+	writeln(s);
+readln
+end.
+```
+
+Result 1
+```
+Nhap xau :
+khoadeptrai
+kdeptrai
+```
+Result 2
+```
+Nhap xau :
+12345
+15
+```
+Xoá trong xâu St Num ký tự bắt đầu từ vị trí Pos.
+### 5.  Thủ tục INSERT(SubSt: String; Var St: String; Pos: Byte);
+```
+uses crt;
+var s:string;
+begin
+	clrscr;
+	writeln('Nhap xau : ');readln(s);
+	insert('k',s,1);
+	writeln(s);
+readln
+end.
+```
+
+Result
+```
+Nhap xau :
+hoa
+khoa
+```
+Chèn xâu SubSt vào xâu St bắt đầu tại vị trí Pos.
+### 6. Thủ tục STR(Num; Var St:String);
+Đổi số nguyên hay thực Num thành dạng xâu ký tự, kết quả lưu vào biến St.
+### 7. Thủ tục VAL(St:String; Var Num; Var Code:Integer);
+Đổi xâu số St thành số và gán kết quả lưu vào biến Num. Nếu việc chuyển đổi thành công thì biến Code có giá trị là 0, ngược lại biến Code có giá trị khác 0 (vị trí của lỗi).
+## V.Thuật toán String

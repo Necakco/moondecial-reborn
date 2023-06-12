@@ -3,45 +3,24 @@ sidebar_position: 1
 ---
 
 # Intro
-
+:::tip
+  Tải App để mở khóa thêm nhiều tính năng mới 
+:::
 Let's discover **MoonDecial in less than 5 minutes**.
+:::info
+  Truy cập vào đường Link này để có thể xem hướng dẫn sử dụng MoonDecial
+:::
+## Giới thiệu về MoonDecial
 
-## Getting Started
+MoonDecial là một nền tảng học trực tuyến tiên tiến, mang đến cho bạn khả năng học tập và phát triển kỹ năng một cách linh hoạt và hiệu quả. Với sự kết hợp của công nghệ tiên tiến và sự chuyên sâu về giáo dục, MoonDecial đã tạo ra một môi trường học tập độc đáo, nơi mọi người có thể khám phá và mở rộng kiến thức của mình.
 
-Get started by **creating a new site**.
+Với MoonDecial, bạn có thể truy cập vào hàng ngàn khóa học chất lượng cao từ các lĩnh vực khác nhau, bao gồm khoa học, kỹ năng mềm, công nghệ, kinh doanh và nhiều hơn nữa. Những khóa học này được thiết kế bởi các chuyên gia hàng đầu trong ngành và được cập nhật thường xuyên để đảm bảo rằng bạn luôn có được những kiến thức mới nhất.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Với giao diện đơn giản và thân thiện, MoonDecial giúp bạn tiếp cận kiến thức một cách dễ dàng và thuận tiện. Bạn có thể học tại bất kỳ đâu và bất kỳ lúc nào theo sở thích và lịch trình của riêng mình. Ngoài ra, nền tảng còn cung cấp các công cụ tương tác và bài kiểm tra để đánh giá và nâng cao hiệu quả học tập của bạn.
 
-### What you'll need
+Với MoonDecial, chúng tôi cam kết mang đến cho bạn một trải nghiệm học tập tuyệt vời và đáng tin cậy. Chúng tôi tin rằng mọi người có thể không ngừng phát triển và mở rộng kiến thức của mình, và MoonDecial sẽ là đối tác đáng tin cậy để bạn thực hiện điều đó.
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Hãy gia nhập MoonDecial ngay hôm nay và khám phá một thế giới học tập mới mở ra trước mắt bạn!
 
-## Generate a new site
 
-Generate a new Docusaurus site using the **classic template**.
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.

@@ -3,3 +3,56 @@ sidebar_position: 2
 ---
 
 # Variables And IF | ELSE
+if else Pascal
+
+## I. Variables
+### 1. What Is Variables?
+Tất cả các biến phải được khai báo trước khi sử dụng chương trình Pascal. Tất cả các khai báo biến theo sau từ var. 
+
+Một khai báo chỉ định một danh sách biến, tiếp theo là dấu hai chấm (:) và kiểu biến. 
+
+Cú pháp khai báo biến:
+```
+var variable_list : type;
+```
+vd:
+```
+var
+age, weekdays : integer;
+taxrate, net_income: real;
+choice, isready: boolean;
+initials, grade: char;
+name, surname : string;
+```
+value Là dữ liệu tự chọn nằm trong bảng kiểu dữ liệu ở pascal bài 1 mình đã giới thiệu
+:::info
+như ta đã biết trong toán học thì
+Hằng là "tên biểu tượng" đại diện cho một giá trị không thay đổi trong chương trình. Ví dụ: gọi PI là số Pi trong toán học, có giá trị không đổi là 3.14159. Khi đó, PI gọi là hằng số.
+:::
+### 2. Usage
+Biến của Pascal thì có thể làm được các phép toán như trong toán học đúng như bạn nghĩ nó chỉ là một số lưu trữ dưới dạng biến và bạn có thể thoải mái thao tác với nó như vậy thì chỉ cần biết cú pháp sữ lý biến là xong không cần phải quan tâm đến quy tắc
+Thao Tác gán biến
+A := 3;
+### 3. lưu ý
+lúc chưa được gán giá trị cho biến thì biến pascal luôn = 0
+## II. If Else Pascal
+### 1 . Cú pháp
+```
+if (<dk>) then 
+begin
+   {Câu lệnh}
+end;
+```
+Trong đó thì DK là điều kiện đặt ra ta có thể dùng các cú pháp như AND hoặc Or đển thêm điều kiện Câu điều kiện dạng thiếu
+```
+if (<dk>) then <command> else <command>
+```
+### 2 . thuật toán
+Thuật toán Sữ lý điều kiện nâng 
+```
+if (<dk>) then <command> else
+if (<dk>) then <command> else
+if (<dk>) then <command> else
+	...
+```
+Đúng như các bạn thấy thì có thể lồng else vô để thêm tính chắc chắn của điều kiện như cần nhất thiết điều kiện kia phải đúng để thực hiện điều kiện này 

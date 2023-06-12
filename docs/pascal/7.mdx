@@ -3,3 +3,76 @@ sidebar_position: 7
 ---
 
 # FILES
+Pascal
+
+## I.Lý Thuyết
+Tại Sao lại Phải Cẩn Sử lý file
+Xử lý file là một phần quan trọng trong lập trình, vì nó cho phép chương trình của chúng ta tương tác với các file trong hệ thống, đọc và ghi dữ liệu vào file để lưu trữ và chia sẻ thông tin với người dùng hoặc với các ứng dụng khác. Một số ứng dụng của việc xử lý file bao gồm:
+
+- Đọc và ghi dữ liệu từ và vào file: Đây là ứng dụng phổ biến nhất của xử lý file. Khi bạn cần lưu trữ dữ liệu vào file hoặc đọc dữ liệu từ file, bạn sẽ sử dụng các hàm và thủ tục xử lý file để thực hiện điều này.
+- Sao lưu dữ liệu: Khi bạn cần sao lưu dữ liệu của ứng dụng, bạn có thể sử dụng xử lý file để lưu trữ các giá trị và thông tin của ứng dụng vào một file.
+- Xử lý tệp văn bản: Bạn có thể sử dụng xử lý file để đọc và ghi các tệp văn bản, thực hiện các thao tác trên các tệp văn bản như cắt, sao chép, chèn, xóa và sửa đổi các nội dung của tệp.
+
+Trong Pascal, để xử lý file, ta cần các thủ tục sau:
+
+- Mở file: Sử dụng hàm "Assign" để gán tên file vào một biến để sử dụng trong các thao tác tiếp theo. Sau đó sử dụng hàm "Reset" hoặc "Rewrite" để mở file lên để đọc hoặc ghi.
+- Đọc file: Sử dụng hàm "Read" để đọc dữ liệu từ file.
+- Ghi file: Sử dụng hàm "Write" để ghi dữ liệu vào file.
+- Đóng file: Sử dụng hàm "Close" để đóng file sau khi thực hiện xong các thao tác trên file.
+
+## II.Cú Pháp
+
+Để mở File
+```
+Assign(<Tên biến file>, <Tên file>);
+Reset(<Tên biến file>); // mở file để đọc
+Rewrite(<Tên biến file>); // mở file để ghi
+```
+
+Để đọc file:
+
+```
+Read(<Tên biến file>, <Biến cần đọc>);
+```
+
+Để ghi file:
+
+```
+Write(<Tên biến file>, <Biến cần ghi>);
+```
+
+Để đóng file:
+
+```
+Close(<Tên biến file>);
+```
+Ví dụ: Giả sử ta có một file "input.txt" chứa danh sách các số nguyên, ta muốn đọc các số này vào mảng và tính tổng các phần tử trong mảng, sau đó ghi tổng vào file "output.txt".
+```
+Program fileExample;
+Var
+  fInput, fOutput: Text;
+  a: array[1..100] of Integer;
+  i, n, sum: Integer;
+Begin
+  Assign(fInput, 'input.txt');
+  Reset(fInput);
+
+  n := 0;
+  while not eof(fInput) do
+  begin
+    n := n + 1;
+    Read(fInput, a[n]);
+  end;
+
+  Close(fInput);
+
+  sum := 0;
+  for i := 1 to n do
+    sum := sum + a[i];
+
+  Assign(fOutput, 'output.txt');
+  Rewrite(fOutput);
+  Write(fOutput, sum);
+  Close(fOutput);
+End.
+```
