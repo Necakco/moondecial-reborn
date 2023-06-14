@@ -112,4 +112,41 @@ html[data-theme='dark'] {
 .fat1{
   width: 120px;
 }
+.idkquizz{
+  background-image: url(https://moondecial-next.web.app/static/media/bg.fbd7e695220acf2e73dd.gif);  
+  align-items: center;
+  justify-content: center;
+  background-repeat:no-repeat;
+  justify-content: center;
+  background-size: cover;
+}
+.mainquizz {
+  margin-top: 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.flex-container {
+  font-family: 'Comfortaa', cursive !important;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
 
+.conterse {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .flex-container {
+    justify-content: center;
+  }
+}
