@@ -11,7 +11,7 @@ const config = {
   favicon: "img/logo.ico",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://base-moondecial.web.app/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -32,6 +32,18 @@ const config = {
     locales: ["vi", "en"],
   },
 
+
+  // or, if you want to specify options:
+
+  // ...
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        // Options here
+      },
+    ],
+  ],
   presets: [
     [
       "classic",

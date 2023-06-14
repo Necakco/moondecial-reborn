@@ -1,85 +1,196 @@
 ---
 sidebar_position: 1
 ---
-# Starter
+# Các câu lệnh điều khiển
+C++
 
-Khởi Đầu Pascal   
+:::info
+Trong C++, các câu lệnh điều khiển được sử dụng để kiểm soát luồng thực thi của chương trình. Dưới đây là một số câu lệnh điều khiển quan trọng trong C++:
+:::
 
-```cpp
-program hello;
-uses crt;
-begin
-	clrscr;
-	writeln('Hello World');
-readln
-end.
-```
+## If - else
+> Sử dụng để kiểm tra điều kiện và thực hiện các hành động khác nhau tùy thuộc vào kết quả của điều kiện.
+Câu lệnh IF | ELSE (nếu không | ngược lại) là một câu lệnh rẽ nhánh thường được sử dụng trong C++ để kiểm soát luồng chương trình. Nó cho phép kiểm tra điều kiện đúng hoặc sai và dựa vào kết quả của điều kiện, chạy một khối mã cụ thể.
 
-## 1.Pascal là gì ?
-Ngay từ khi còn ngồi trên ghế trường THCS thì các bạn học sinh cũng đã được tiếp xúc cùng với ngôn ngữ lập trình Pascal, tuy nhiên không phải ai cũng hiểu rõ về ngôn ngữ lập trình này.
-
-Pascal chính là ngôn ngữ về lập trình máy tính theo dạng lệnh được phát triển bởi vì giáo sư Niklaus Wirth ( ở trường đại học kĩ thuật Zurich – Thụy Sĩ). Và đặt tên đó là Pascal để tưởng nhớ nhà toán học và triết học nổi tiếng người Pháp: Blaise Pascal. Bài học dưới đây sẽ giúp cho các bạn hiểu rõ hơn về ngôn ngữ này và hiểu được lý do vì sao ngôn ngữ Pascal này lại được lựa chọn để đưa vào các chương trình phổ thông tới các bạn học sinh.
-
-Pascal chính là ngôn ngữ lập trình đặc biệt rất thích hợp với kiểu lập trình cấu trúc và cấu trúc dữ liệu, ngôn ngữ lập trình này còn được đặt theo tên của nhà toán học và triết gia, nhà vật lý người Pháp của Blaise Pascal. Pascal được phát triển đúng theo khuôn mẫu của ngôn ngữ lập trình ALGOL 60. Wirth cũng đã phát triển một vài cải tiến cho ngôn ngữ lập trình này như một phần của những đề xuất ALGOL X, tuy nhiên chúng không được chấp nhận do đó ngôn ngữ Pascal để được phát triển riêng biệt và phát hành trong năm 1970.
-
-Pascal có đặc điểm
-+ Ngữ pháp và ngữ nghĩa khá đơn giản và có tính logic.
-+ Cấu trúc của chương trình rõ ràng, giao diện dễ hiểu.
-+ Dễ dàng sửa chữa, cải tiến.
-
-## 2.Code Editer
-Pascal là một ngôn ngữ cỗ nên không có quá nhiều codeediter hỗ trợ - thì trong bài học này chúng ta sẽ sử dụng Sublime Text (Phiên bản khoa đang sài là v4) kết hợp với Pascal code editer phổ biến cho học sinh cấp THCS
-
-Đầu Tiên các bạn tải sublimeText trước cách Setup Theme và tiện ích mở rộng thì mình có giới thiệu trong Blog 
-
-Link : [Cách setup SublimeText để code Pascal](/create-a-page).
-
-## 3.Cú Pháp
-Một chương trình Pascal về cơ bản bao gồm các phần sau đây: 
+Cấu trúc câu lệnh IF | ELSE như sau:
 
 ```cpp
-Program { tên của chương trình }
-Uses { khai báo các thư viện }
-Const { khai báo các hằng toàn cục }
-Var { khai báo các biến toàn cục }
-
-{ khai báo hàm / thủ tục (nếu cần) }
-
-Begin { bắt đầu khối chương trình chính }
-...
-End. { kết thúc khối chương trình chính }
-
+if (condition) {
+  // code to be executed if condition is true
+}
+else {
+  // code to be executed if condition is false
+}
 ```
 
-** ví dụ **
+condition là biểu thức được sử dụng để kiểm tra xem điều kiện đúng hay sai. Nếu điều kiện trả về TRUE, các lệnh trong khối IF sẽ được thực thi. Nếu điều kiện trả về FALSE, các lệnh trong khối ELSE sẽ được thực thi. Ví dụ, sau đây là một chương trình minh họa sử dụng câu lệnh IF / ELSE:
+
 ```cpp
-program hello;
-uses crt;
-begin
-	clrscr;
-	writeln('Hello World');
-readln
-end.
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+   int a = 10;
+   
+   if( a == 20 )
+   {
+      cout<<"a is equal to 20"<<endl;
+   }
+   else
+   {
+      cout<<"a is not equal to 20"<<endl;
+   }
+   
+   return 0;
+}
+```
+Kết quả sẽ là:
+```cpp
+a is not equal to 20
+```
+Trong ví dụ này, biểu thức a == 20 được sử dụng để kiểm tra giá trị của biến a. Vì giá trị của a không bằng 20, nên các lệnh trong khối else được thực thi và kết quả được in ra màn hình là a is not equal to 20.
+
+## Switch - case
+> Sử dụng để kiểm tra các giá trị khác nhau của biểu thức và thực hiện các hành động khác nhau tùy thuộc vào kết quả của giá trị.
+
+Trong C++, switch-case là một cấu trúc điều khiển lựa chọn dựa trên giá trị của biểu thức được xác định bởi case, cho phép thiết lập các điều kiện khác nhau tương ứng với từng trường hợp.
+
+Cú pháp của switch-case như sau:
+```cpp
+switch(expression) {
+    case constant-expression:
+        // code block
+        break; // không được bỏ qua
+    case constant-expression:
+        // code block
+        break; // không được bỏ qua
+    default:
+        // code block nếu không có case nào thỏa mãn
+}
+```
+Một vài điểm cần lưu ý khi sử dụng switch-case trong C++:
+
+Biểu thức expression trong switch-case chỉ có thể là kiểu số nguyên, ký tự hoặc danh sách đơn giản các ký tự được tách ra bằng dấu phẩy.
+
+Mỗi trường hợp (case) được kết thúc bởi lệnh break để thoát khỏi khối lệnh switch-case, nếu không sẽ tiếp tục thực hiện các câu lệnh của các trường hợp khác.
+
+Trường hợp mặc định (default) không bắt buộc phải có, nếu không có case nào đúng với giá trị được chọn, các câu lệnh trong trường hợp này sẽ được thực hiện.
+
+Khi giá trị của biểu thức trong switch-case thỏa mãn nhiều trường hợp, chỉ có trường hợp được xử lý đầu tiên sẽ được thực hiện.
+
+For loop: Sử dụng để lặp lại một khối mã một số lần, với điều kiện lặp được xác định trước.
+
+## FOR Loop 
+> trong C++ được sử dụng để lặp lại tập hợp các lệnh cho một khoảng thời gian nhất định. Nó được sử dụng khi số lần lặp lại của hoạt động có thể định trước được.
+
+Cú pháp của vòng lặp FOR như sau:
+```cpp
+for(initialization; condition; increment/decrement){
+    //statements to be executed repeatedly
+}
+```
+Trong đó:
+
+- Initialization: Thực hiện 1 lần đầu tiên, nơi khai báo giá trị ban đầu cho biến điều kiển.
+- Condition: Kiểm tra điều kiện vòng lặp và điều này được thực hiện trước mỗi lần lặp lại.
+- Increment/Decrement: Bước Chuyển sang cách thực hiện chương trình từ lần lặp này qua lần lặp khác.
+Ví dụ: Lặp lại các số từ 0 đến 4
+```cpp
+for(int i = 0; i < 5; i++){
+    cout << i << " ";
+}
+```
+Output:
+```
+0 1 2 3 4
+```
+Như vậy, khi thực hiện vòng lặp FOR, giá trị ban đầu của i là 0. Điều kiện là i < 5, nếu đúng thì lệnh sẽ được thực thi và i sẽ được tăng lên 1. Quá trình này sẽ lặp lại cho đến khi i = 5.
+
+Chúng ta có thể sử dụng vòng lặp FOR để lặp lại chuỗi, mảng và danh sách. Ví dụ:
+```cpp
+string str = "Hello World";
+for(int i = 0; i < str.size(); i++){
+    cout << str[i] << " ";
+}
+```
+OUTPUT:
+```
+H e l l o   W o r l d
+```
+## While loop
+> Sử dụng để lặp lại một khối mã cho đến khi điều kiện lặp lại không còn đúng.
+
+while loop là một cấu trúc lặp trong C++, nó cho phép thực hiện một tập hợp các câu lệnh theo một đối tượng runtime nào đó. Ví dụ, để đọc một số lớn hơn 10 từ bàn phím, chúng ta có thể sử dụng while loop như sau:
+```cpp
+int num;
+cout << "Enter a number greater than 10: ";
+cin >> num;
+
+while(num <= 10) {
+    cout << "Number is not greater than 10! Try again: ";
+    cin >> num;
+}
+
+cout << "Thanks! You entered: " << num << endl;
 ```
 
-Chúng ta hãy phân tích các thành phần của chương trình trên:
+while loop đi kèm với một biểu thức điều kiện. Nếu giá trị của biểu thức này đúng, các câu lệnh được thực hiện trong while loop được thực thi lần lượt. Những khi giá trị của biểu thức là sai, vòng lặp sẽ kết thúc và chương trình tiếp tục chạy từ vị trí tiếp theo.
 
-Dòng đầu tiên Program Hello_World; Cho biết tên của chương trình là Hello_World. Dòng thứ hai Uses CRT; Là một lệnh tiền xử lý, cho trình biên dịch biết là cần chèn các lệnh trong thư viện CRT vào (sẽ dùng các lệnh trong thư viện CRT) trước khi thực hiện biên dịch.
+Không giống như for loop, while loop không yêu cầu một khởi tạo ban đầu của biến đếm hoặc một sự đổi mới trong tiến trình lặp.
 
-Các dòng tiếp theo được đóng trong cặp Begin và End là khối chương trình chính. Mỗi khối trong Pascal được đóng trong cặp Begin và End. Tuy nhiên, End. cho biết đây là kết thúc của chương trình chính thay vì End; là kết thúc của một chương trình con. Câu lệnh Begin của khối chương trình chính là nơi chương trình được bắt đầu thực thi. Các dòng trong (* ... *) sẽ bị bỏ qua bởi trình dịch và nó đã được đưa vào để thêm một bình luận hay chú thích trong chương trình.
+Nhược điểm của while loop so với for loop là không có khai báo ban đầu cho các biến lặp, điều này có thể dẫn đến việc khai báo sai kích thước bộ nhớ đôi khi người lập trình quên khai báo hoặc khai báo sai, do đó dẫn đến lỗi chương trình.
 
-Lệnh Writeln (‘Hello, World!’); Sử dụng lệnh Writeln có sẵn trong Pascal để viết ra thông báo Hello, World! lên màn hình.
-Lệnh Readln: khác với hàm Readln thông thưởng đây là hàm giúp cho ct không bị tắt đơn giảng vậy
+## Do-while loop
+> Tương tự như while loop, tuy nhiên khối mã được thực thi ít nhất một lần, trước khi điều kiện kiểm tra được kiểm tra.
+Do-While là một loại vòng lặp (loop) trong C++ và được sử dụng để thực hiện một khối mã (code block) nhiều lần. Cú pháp của vòng lặp Do-While như sau:
 
-Lệnh End cuối cùng chính là nơi chương trình kết thúc. 
-
-## 4.Một số câu lệnh cơ bản
-Ở chương trình trên lệnh Writeln(‘Hello, World!’); dùng để viết dòng chữ Hello, World! ra màn hình. Writeln là lệnh dùng để xuất dữ liệu trong Pascal với cú pháp như sau: 
-
-```c
-Writeln(<Text>);
+```cpp
+do {
+  // code block
+} while (condition);
+Code block bên trong khối "do" sẽ được thực thi ít nhất một lần ngay cả khi điều kiện không đúng. Sau mỗi lần thực hiện code block, điều kiện của vòng lặp sẽ được kiểm tra. Nếu điều kiện là đúng, khối lệnh sẽ được thực thi tiếp tục và quá trình này sẽ tiếp diễn cho đến khi điều kiện sai.
 ```
-Nhập vào dữ liệu 
-```c
-readln(<variables>);
+
+Ví dụ:
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+   int i = 1;
+   
+   do {
+       cout << i << "\n";
+       i++;
+   } while(i <= 5);
+
+   return 0;
+}
 ```
+Kết quả sẽ in ra các số từ 1 đến 5.
+
+Lưu ý rằng vòng lặp Do-While ít được sử dụng hơn so với các vòng lặp khác. Điều này là bởi vì với các vòng lặp khác, điều kiện được kiểm tra trước khi khối mã được thực thi, trong khi vòng lặp Do-While có khả năng thực thi code block ít nhất một lần ngay cả khi điều kiện không đúng.
+
+## Break 
+> Sử dụng để dừng vòng lặp hiện tại hoặc switch statement.
+
+```cpp
+for (int i=0; i<10; i++) {
+  if (i == 5) {
+    break;
+  }
+  cout << i << endl;
+}
+```
+Continue: Sử dụng để bỏ qua những lần lặp của vòng lặp hiện tại và tiếp tục với lần lặp tiếp theo.
+```cpp
+for (int i=0; i<10; i++) {
+  if (i == 5) {
+    continue;
+  }
+  cout << i << endl;
+}
+```
+Trên đây là một số câu lệnh điều khiển quan trọng trong C++. Chúng ta có thể sử dụng các câu lệnh này để kiểm soát và quản lý luồng thực thi của chương trình một cách hiệu quả. 

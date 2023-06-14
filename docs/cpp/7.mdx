@@ -1,85 +1,74 @@
 ---
 sidebar_position: 1
 ---
-# Starter
+# Hàm
 
-Khởi Đầu Pascal   
+c++
 
+Hàm (Function) trong C++ là một khối mã có thể được tái sử dụng bằng cách gọi nó từ các phần khác của chương trình. Nó sẽ chứa một tập hợp lệnh để thực hiện một tác vụ hoặc tính toán giá trị và trả về kết quả.
+## 1. Khai báo hàm
+Khai báo hàm trong C++ có ba đặc điểm sau: Tên hàm – Một tên cho hàm của bạn, một cái tên đã được chọn sao cho nó cung cấp ý nghĩa cho những gì hàm của bạn được thiết kế để làm. Kiểu trả về – Loại giá trị trả về khi hàm được gọi. Tham số – Các đối tượng chúng ta muốn truyền vào hàm. Cú pháp
 ```cpp
-program hello;
-uses crt;
-begin
-	clrscr;
-	writeln('Hello World');
-readln
-end.
+[kiểu_trả_về] [tên_hàm](tham_số){
+  // Các câu lệnh
+}
 ```
+Trong đó:
 
-## 1.Pascal là gì ?
-Ngay từ khi còn ngồi trên ghế trường THCS thì các bạn học sinh cũng đã được tiếp xúc cùng với ngôn ngữ lập trình Pascal, tuy nhiên không phải ai cũng hiểu rõ về ngôn ngữ lập trình này.
+- kiểu_trả_về là kiểu dữ liệu được trả về bởi hàm.
+- tên_hàm là tên của hàm.
+- tham_số là danh sách các đối số mà hàm sẽ sử dụng.
 
-Pascal chính là ngôn ngữ về lập trình máy tính theo dạng lệnh được phát triển bởi vì giáo sư Niklaus Wirth ( ở trường đại học kĩ thuật Zurich – Thụy Sĩ). Và đặt tên đó là Pascal để tưởng nhớ nhà toán học và triết học nổi tiếng người Pháp: Blaise Pascal. Bài học dưới đây sẽ giúp cho các bạn hiểu rõ hơn về ngôn ngữ này và hiểu được lý do vì sao ngôn ngữ Pascal này lại được lựa chọn để đưa vào các chương trình phổ thông tới các bạn học sinh.
+Ví dụ ta khai báo hàm tính tổng 2 số nguyên:
+```
+int sum(int num1, int num2){
+    int result = num1 + num2;
+    return result;
+}
+```
+Hàm này có tên là sum.
 
-Pascal chính là ngôn ngữ lập trình đặc biệt rất thích hợp với kiểu lập trình cấu trúc và cấu trúc dữ liệu, ngôn ngữ lập trình này còn được đặt theo tên của nhà toán học và triết gia, nhà vật lý người Pháp của Blaise Pascal. Pascal được phát triển đúng theo khuôn mẫu của ngôn ngữ lập trình ALGOL 60. Wirth cũng đã phát triển một vài cải tiến cho ngôn ngữ lập trình này như một phần của những đề xuất ALGOL X, tuy nhiên chúng không được chấp nhận do đó ngôn ngữ Pascal để được phát triển riêng biệt và phát hành trong năm 1970.
+Hàm này trả về một giá trị kiểu integer (int).
 
-Pascal có đặc điểm
-+ Ngữ pháp và ngữ nghĩa khá đơn giản và có tính logic.
-+ Cấu trúc của chương trình rõ ràng, giao diện dễ hiểu.
-+ Dễ dàng sửa chữa, cải tiến.
+Hàm này có hai tham số được truyền vào và kiểu của chúng đều là integer.
 
-## 2.Code Editer
-Pascal là một ngôn ngữ cỗ nên không có quá nhiều codeediter hỗ trợ - thì trong bài học này chúng ta sẽ sử dụng Sublime Text (Phiên bản khoa đang sài là v4) kết hợp với Pascal code editer phổ biến cho học sinh cấp THCS
-
-Đầu Tiên các bạn tải sublimeText trước cách Setup Theme và tiện ích mở rộng thì mình có giới thiệu trong Blog 
-
-Link : [Cách setup SublimeText để code Pascal](/create-a-page).
-
-## 3.Cú Pháp
-Một chương trình Pascal về cơ bản bao gồm các phần sau đây: 
-
+Ngoài ra, có thể khai báo hàm mà không có giá trị trả về (kiểu void), ví dụ:
 ```cpp
-Program { tên của chương trình }
-Uses { khai báo các thư viện }
-Const { khai báo các hằng toàn cục }
-Var { khai báo các biến toàn cục }
-
-{ khai báo hàm / thủ tục (nếu cần) }
-
-Begin { bắt đầu khối chương trình chính }
-...
-End. { kết thúc khối chương trình chính }
-
+void printMessage(string message) {
+  cout << message << endl;
+}
 ```
 
-** ví dụ **
+## 2. Gọi hàm
+
+Để gọi hàm trong chương trình C++, chỉ cần sử dụng tên hàm và truyền đối số (nếu có).
 ```cpp
-program hello;
-uses crt;
-begin
-	clrscr;
-	writeln('Hello World');
-readln
-end.
+int main() {
+    int a = 5, b = 10;
+    int c = sum(a, b);
+    cout << "Tong hai so la: " << c << endl;
+
+    return 0;
+}
 ```
+## Hàm đệ quy
+Hàm đệ quy là hàm gọi lại chính nó, thực hiện đệ quy để giải quyết một vấn đề. Hàm đệ quy phải có điều kiện dừng để tránh xảy ra vòng lặp vô hạn.
 
-Chúng ta hãy phân tích các thành phần của chương trình trên:
+Ví dụ tính giai thừa bằng đệ quy:
+```cpp
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+int main() {
+    int n = 7;
+    int result = factorial(n);
+    cout << "Giai thua cua " << n << " la: " << result << endl;
 
-Dòng đầu tiên Program Hello_World; Cho biết tên của chương trình là Hello_World. Dòng thứ hai Uses CRT; Là một lệnh tiền xử lý, cho trình biên dịch biết là cần chèn các lệnh trong thư viện CRT vào (sẽ dùng các lệnh trong thư viện CRT) trước khi thực hiện biên dịch.
-
-Các dòng tiếp theo được đóng trong cặp Begin và End là khối chương trình chính. Mỗi khối trong Pascal được đóng trong cặp Begin và End. Tuy nhiên, End. cho biết đây là kết thúc của chương trình chính thay vì End; là kết thúc của một chương trình con. Câu lệnh Begin của khối chương trình chính là nơi chương trình được bắt đầu thực thi. Các dòng trong (* ... *) sẽ bị bỏ qua bởi trình dịch và nó đã được đưa vào để thêm một bình luận hay chú thích trong chương trình.
-
-Lệnh Writeln (‘Hello, World!’); Sử dụng lệnh Writeln có sẵn trong Pascal để viết ra thông báo Hello, World! lên màn hình.
-Lệnh Readln: khác với hàm Readln thông thưởng đây là hàm giúp cho ct không bị tắt đơn giảng vậy
-
-Lệnh End cuối cùng chính là nơi chương trình kết thúc. 
-
-## 4.Một số câu lệnh cơ bản
-Ở chương trình trên lệnh Writeln(‘Hello, World!’); dùng để viết dòng chữ Hello, World! ra màn hình. Writeln là lệnh dùng để xuất dữ liệu trong Pascal với cú pháp như sau: 
-
-```c
-Writeln(<Text>);
+    return 0;
+}
 ```
-Nhập vào dữ liệu 
-```c
-readln(<variables>);
-```
+Cuối cùng, hàm là một khối mã có thể được tái sử dụng bằng cách gọi nó từ phần khác của chương trình (ví dụ trong hàm main). 

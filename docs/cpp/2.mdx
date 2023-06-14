@@ -1,85 +1,72 @@
 ---
 sidebar_position: 1
 ---
-# Starter
 
-Khởi Đầu Pascal   
+# Giới thiệu Về C++
+C++
 
+C++ là một ngôn ngữ lập trình hướng đối tượng (OOP) và được phát triển từ ngôn ngữ C. Nó được sử dụng rộng rãi trong việc phát triển hệ thống nhúng, game, ứng dụng desktop, server-side, và phần mềm di động. C++ cung cấp cho người lập trình nhiều tính năng mạnh mẽ như hỗ trợ đa luồng, kế thừa, đa hình, quản lý bộ nhớ theo kiểu thủ công, và nhiều tính năng khác. Các tính năng này giúp cho việc lập trình trở nên dễ dàng và hiệu quả hơn.
+Công Dụng và vai trò của C++
+Một số ứng dụng tiêu biểu của C++ là ứng dụng Windows, game, các phần mềm đồ họa và âm thanh, các trình duyệt web, và các ứng dụng di động.
+- Phát triển game: C++ thường được sử dụng để phát triển các trò chơi máy tính do tính năng hiệu suất cao của nó. Ví dụ: game Half-Life, Doom.
+- Lập trình kernel: C++ được sử dụng để phát triển hệ điều hành vì nó có thể tương tác trực tiếp với phần cứng của máy tính.
+- Phát triển phần mềm: C++ cũng được sử dụng rộng rãi trong phát triển phần mềm máy tính, đặc biệt là các phần mềm có yêu cầu về hiệu suất cao như các trình duyệt web và phần mềm đồ họa.
+- IoT (Internet of Things): C++ cũng được sử dụng trong các thiết bị nhúng như thiết bị điều khiển, wifi, ...
+- Machine learning: C++ được sử dụng cho việc bé nhóm thuật toán vô cùng tối ưu giúp dễ dàng implement machine learning và deep learning.
+
+C++ là một ngôn ngữ lập trình đa năng và được sử dụng rộng rãi trong các ứng dụng như phát triển game, phần mềm máy tính, hệ điều hành và cả nhúng. Dưới đây là một số ví dụ về chức năng của C++: Trên đây chỉ là một số ví dụ về ứng dụng của C++, thêm vào đó nhờ sự linh hoạt, khả năng tùy biến tin cậy và hiệu suất ấn tượng, C++ còn được sử dụng trong rất nhiều lĩnh vực khác.
+Cấu Trúc của C++
+
+C++ là một ngôn ngữ lập trình bậc cao, hỗ trợ cả lập trình hướng đối tượng và thủ tục. Cấu trúc của một chương trình C++ gồm các phần chính sau: Khai báo các thư viện:
+Ta sử dụng các thư viện để giúp ta xử lý một số tác vụ nhất định. Ví dụ:
 ```cpp
-program hello;
-uses crt;
-begin
-	clrscr;
-	writeln('Hello World');
-readln
-end.
+#include <iostream>
 ```
-
-## 1.Pascal là gì ?
-Ngay từ khi còn ngồi trên ghế trường THCS thì các bạn học sinh cũng đã được tiếp xúc cùng với ngôn ngữ lập trình Pascal, tuy nhiên không phải ai cũng hiểu rõ về ngôn ngữ lập trình này.
-
-Pascal chính là ngôn ngữ về lập trình máy tính theo dạng lệnh được phát triển bởi vì giáo sư Niklaus Wirth ( ở trường đại học kĩ thuật Zurich – Thụy Sĩ). Và đặt tên đó là Pascal để tưởng nhớ nhà toán học và triết học nổi tiếng người Pháp: Blaise Pascal. Bài học dưới đây sẽ giúp cho các bạn hiểu rõ hơn về ngôn ngữ này và hiểu được lý do vì sao ngôn ngữ Pascal này lại được lựa chọn để đưa vào các chương trình phổ thông tới các bạn học sinh.
-
-Pascal chính là ngôn ngữ lập trình đặc biệt rất thích hợp với kiểu lập trình cấu trúc và cấu trúc dữ liệu, ngôn ngữ lập trình này còn được đặt theo tên của nhà toán học và triết gia, nhà vật lý người Pháp của Blaise Pascal. Pascal được phát triển đúng theo khuôn mẫu của ngôn ngữ lập trình ALGOL 60. Wirth cũng đã phát triển một vài cải tiến cho ngôn ngữ lập trình này như một phần của những đề xuất ALGOL X, tuy nhiên chúng không được chấp nhận do đó ngôn ngữ Pascal để được phát triển riêng biệt và phát hành trong năm 1970.
-
-Pascal có đặc điểm
-+ Ngữ pháp và ngữ nghĩa khá đơn giản và có tính logic.
-+ Cấu trúc của chương trình rõ ràng, giao diện dễ hiểu.
-+ Dễ dàng sửa chữa, cải tiến.
-
-## 2.Code Editer
-Pascal là một ngôn ngữ cỗ nên không có quá nhiều codeediter hỗ trợ - thì trong bài học này chúng ta sẽ sử dụng Sublime Text (Phiên bản khoa đang sài là v4) kết hợp với Pascal code editer phổ biến cho học sinh cấp THCS
-
-Đầu Tiên các bạn tải sublimeText trước cách Setup Theme và tiện ích mở rộng thì mình có giới thiệu trong Blog 
-
-Link : [Cách setup SublimeText để code Pascal](/create-a-page).
-
-## 3.Cú Pháp
-Một chương trình Pascal về cơ bản bao gồm các phần sau đây: 
-
+## Khai báo các biến:
+Trong C++, ta phải khai báo trước khi sử dụng các biến này. Ví dụ:
 ```cpp
-Program { tên của chương trình }
-Uses { khai báo các thư viện }
-Const { khai báo các hằng toàn cục }
-Var { khai báo các biến toàn cục }
-
-{ khai báo hàm / thủ tục (nếu cần) }
-
-Begin { bắt đầu khối chương trình chính }
-...
-End. { kết thúc khối chương trình chính }
-
+int a;
+Hàm main():
+Đây là hàm chính của chương trình. Khi chạy chương trình, nó sẽ được thực thi đầu tiên.
+ví dụ:
+int main() {
+        // code here
+        return 0;
+}
 ```
+## Lệnh rẽ nhánh:
+Ta có thể sử dụng các lệnh rẽ nhánh để điều chỉnh luồng chạy của chương trình.
 
-** ví dụ **
+Ví dụ:
 ```cpp
-program hello;
-uses crt;
-begin
-	clrscr;
-	writeln('Hello World');
-readln
-end.
+if(condition) {
+    // execute this block of code if condition is true
+} else {
+    // execute this block of code if the condition is false
+}
 ```
+## Lệnh lặp:
+Lệnh lặp cho phép chúng ta lặp lại một khối mã cho đến khi một điều kiện nhất định được đáp ứng.
 
-Chúng ta hãy phân tích các thành phần của chương trình trên:
-
-Dòng đầu tiên Program Hello_World; Cho biết tên của chương trình là Hello_World. Dòng thứ hai Uses CRT; Là một lệnh tiền xử lý, cho trình biên dịch biết là cần chèn các lệnh trong thư viện CRT vào (sẽ dùng các lệnh trong thư viện CRT) trước khi thực hiện biên dịch.
-
-Các dòng tiếp theo được đóng trong cặp Begin và End là khối chương trình chính. Mỗi khối trong Pascal được đóng trong cặp Begin và End. Tuy nhiên, End. cho biết đây là kết thúc của chương trình chính thay vì End; là kết thúc của một chương trình con. Câu lệnh Begin của khối chương trình chính là nơi chương trình được bắt đầu thực thi. Các dòng trong (* ... *) sẽ bị bỏ qua bởi trình dịch và nó đã được đưa vào để thêm một bình luận hay chú thích trong chương trình.
-
-Lệnh Writeln (‘Hello, World!’); Sử dụng lệnh Writeln có sẵn trong Pascal để viết ra thông báo Hello, World! lên màn hình.
-Lệnh Readln: khác với hàm Readln thông thưởng đây là hàm giúp cho ct không bị tắt đơn giảng vậy
-
-Lệnh End cuối cùng chính là nơi chương trình kết thúc. 
-
-## 4.Một số câu lệnh cơ bản
-Ở chương trình trên lệnh Writeln(‘Hello, World!’); dùng để viết dòng chữ Hello, World! ra màn hình. Writeln là lệnh dùng để xuất dữ liệu trong Pascal với cú pháp như sau: 
-
-```c
-Writeln(<Text>);
+ví dụ:
+```cpp
+while(condition) {
+    // execute this block of code while the condition is true
+}
+do {
+    // execute this block of code while the condition is true,
+    // but make sure to execute it at least once
+} while(condition);
 ```
-Nhập vào dữ liệu 
-```c
-readln(<variables>);
+```cpp
+for(int i = 0; i < 10; i++) {
+    // execute this block of code for each value of i from 0 to 9 inclusive
+}
 ```
+Cấu trúc đồng bộ hay còn gọi là cấu trúc OOP(object-oriented programming) tức là lập trình hướng đối tượng, tạo ra các class (lớp đối tượng) với tính năng riêng. Có ba thành phần quan trọng trong lập trình hướng đối tượng:
+
+- Tính kế thừa - Inheritance – cho phép bạn tái sử dụng code khi có các class có chung chức năng.
+- Tính đa hình - Polymorphism – giúp bạn có thể xử lí nhiều loại object khác nhau nhưng cùng giải quyết bài toán đó.
+- Tính đóng góp - Encapsulation – giúp bạn che giấu thông tin, giúp các hàm or biến không bị can thiệp vào, từ đó đảm bảo tính giữ kiểm soát.
+## Tổng Kết
+C++ có thể học qua nhiều sách giáo khoa, video hướng dẫn hay các trang web trực tuyến, trên mạng internet cũng như các khóa học có trả phí hoặc miễn phí. Việc học C++ cần đầu tư thời gian và công sức nhưng sẽ mang lại nhiều lợi ích trong tương lai cho bạn khi xây dựng các ứng dụng và sản phẩm phần mềm 

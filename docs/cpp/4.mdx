@@ -1,85 +1,92 @@
 ---
 sidebar_position: 1
 ---
-# Starter
+# Biến
 
-Khởi Đầu Pascal   
+C++
 
+## Biến là gì
+Trong lập trình, biến là một khái niệm quan trọng để lưu trữ giá trị hoặc kết quả tính toán. C++ là một ngôn ngữ lập trình hướng đối tượng và có kiểu dữ liệu cục bộ và toàn cục.
+## I. Kiểu dữ liệu trong C++
+ Trong C++, kiểu dữ liệu định nghĩa kiểu giá trị mà biến có thể lưu trữ. C++ cung cấp những kiểu dữ liệu căn bản và kiểu dữ liệu người dùng tự định nghĩa. Dưới đây là các kiểu dữ liệu trong C++:
+### 1. Kiểu số nguyên (Integer)
+Kiểu số nguyên được sử dụng để lưu trữ giá trị số nguyên. Trong C++, có nhiều loại kiểu số nguyên khác nhau, tùy thuộc vào kích thước và miền giá trị. Các kiểu dữ liệu nguyên khác nhau bao gồm:
+
+- short: Kích thước của kiểu này được coi là 2 byte. Kiểu short có miền giá trị từ -32768 đến 32767.
+- int: Đây là kiểu số nguyên phổ biến nhất trong C++, với kích thước 4 byte cho hầu hết các nền tảng. Miền giá trị của kiểu int thường là từ -2147483648 đến 2147483647.
+- long: Đây là kiểu số nguyên có kích thước lớn hơn kiểu int, thường là 8 byte và miền giá trị từ -9223372036854775808 đến 9223372036854775807.
+- long long: Đây là kiểu số nguyên có kích thước lớn nhất trong C++, có thể đạt đến 16 byte. Miền giá trị của kiểu này rất lớn, từ -9223372036854775808 đến 9223372036854775807.
+### 2. Kiểu số thực (Float và Double)
+C++ cũng cung cấp kiểu dữ liệu để đại diện cho các giá trị số thực. Có hai loại kiểu số thực chính trong C++: kiểu float và double.
+
+- Kiểu float được sử dụng để lưu trữ các giá trị thập phân với độ chính xác khoảng 6 chữ số thập phân. Kích thước của kiểu float là 4 byte.
+- Kiểu double cũng được sử dụng để lưu trữ các giá trị thập phân, nhưng với độ chính xác cao hơn và có kích thước 8 byte.
+Ví dụ:
 ```cpp
-program hello;
-uses crt;
-begin
-	clrscr;
-	writeln('Hello World');
-readln
-end.
+float pi = 3.14159;
+double e = 2.718281828459045;
 ```
+## 3. Kiểu ký tự (Char)
+Kiểu dữ liệu char chỉ có thể lưu trữ một ký tự duy nhất trong bảng mã ASCII. Kích thước của kiểu char là 1 byte và có thể giữ giá trị từ -128 đến 127 hoặc từ 0 đến 255.
 
-## 1.Pascal là gì ?
-Ngay từ khi còn ngồi trên ghế trường THCS thì các bạn học sinh cũng đã được tiếp xúc cùng với ngôn ngữ lập trình Pascal, tuy nhiên không phải ai cũng hiểu rõ về ngôn ngữ lập trình này.
-
-Pascal chính là ngôn ngữ về lập trình máy tính theo dạng lệnh được phát triển bởi vì giáo sư Niklaus Wirth ( ở trường đại học kĩ thuật Zurich – Thụy Sĩ). Và đặt tên đó là Pascal để tưởng nhớ nhà toán học và triết học nổi tiếng người Pháp: Blaise Pascal. Bài học dưới đây sẽ giúp cho các bạn hiểu rõ hơn về ngôn ngữ này và hiểu được lý do vì sao ngôn ngữ Pascal này lại được lựa chọn để đưa vào các chương trình phổ thông tới các bạn học sinh.
-
-Pascal chính là ngôn ngữ lập trình đặc biệt rất thích hợp với kiểu lập trình cấu trúc và cấu trúc dữ liệu, ngôn ngữ lập trình này còn được đặt theo tên của nhà toán học và triết gia, nhà vật lý người Pháp của Blaise Pascal. Pascal được phát triển đúng theo khuôn mẫu của ngôn ngữ lập trình ALGOL 60. Wirth cũng đã phát triển một vài cải tiến cho ngôn ngữ lập trình này như một phần của những đề xuất ALGOL X, tuy nhiên chúng không được chấp nhận do đó ngôn ngữ Pascal để được phát triển riêng biệt và phát hành trong năm 1970.
-
-Pascal có đặc điểm
-+ Ngữ pháp và ngữ nghĩa khá đơn giản và có tính logic.
-+ Cấu trúc của chương trình rõ ràng, giao diện dễ hiểu.
-+ Dễ dàng sửa chữa, cải tiến.
-
-## 2.Code Editer
-Pascal là một ngôn ngữ cỗ nên không có quá nhiều codeediter hỗ trợ - thì trong bài học này chúng ta sẽ sử dụng Sublime Text (Phiên bản khoa đang sài là v4) kết hợp với Pascal code editer phổ biến cho học sinh cấp THCS
-
-Đầu Tiên các bạn tải sublimeText trước cách Setup Theme và tiện ích mở rộng thì mình có giới thiệu trong Blog 
-
-Link : [Cách setup SublimeText để code Pascal](/create-a-page).
-
-## 3.Cú Pháp
-Một chương trình Pascal về cơ bản bao gồm các phần sau đây: 
-
+Ví dụ:
 ```cpp
-Program { tên của chương trình }
-Uses { khai báo các thư viện }
-Const { khai báo các hằng toàn cục }
-Var { khai báo các biến toàn cục }
-
-{ khai báo hàm / thủ tục (nếu cần) }
-
-Begin { bắt đầu khối chương trình chính }
-...
-End. { kết thúc khối chương trình chính }
-
+char grade = 'A';
+cout << grade << endl;
 ```
+## 4. Kiểu boolean
+Kiểu boolean trong C++ đại diện cho các giá trị đúng/sai (true/false) hoặc 1/0. Kích thước của kiểu bool là 1 byte.
 
-** ví dụ **
+Ví dụ:
 ```cpp
-program hello;
-uses crt;
-begin
-	clrscr;
-	writeln('Hello World');
-readln
-end.
+bool isStudent = true;
+if (isStudent) {
+    cout << "This person is a student." << endl;
+} else {
+    cout << "This person is not a student." << endl;
+}
 ```
+Ngoài ra, trong C++ còn có các kiểu dữ liệu đặc biệt khác như void để không trả về giá trị, wchar_t để lưu trữ các ký tự Unicode, và các kiểu dữ liệu liên quan đến địa chỉ như ptrdiff_t, size_t và intptr_t. 
+## II. Khai báo biến
+### 1.1 Khai báo biến cục bộ
+Khai báo biến cục bộ được sử dụng khi ta muốn sử dụng biến trong một phạm vi nhất định, ví dụ như giữa hai dấu ngoặc nhọn.
 
-Chúng ta hãy phân tích các thành phần của chương trình trên:
-
-Dòng đầu tiên Program Hello_World; Cho biết tên của chương trình là Hello_World. Dòng thứ hai Uses CRT; Là một lệnh tiền xử lý, cho trình biên dịch biết là cần chèn các lệnh trong thư viện CRT vào (sẽ dùng các lệnh trong thư viện CRT) trước khi thực hiện biên dịch.
-
-Các dòng tiếp theo được đóng trong cặp Begin và End là khối chương trình chính. Mỗi khối trong Pascal được đóng trong cặp Begin và End. Tuy nhiên, End. cho biết đây là kết thúc của chương trình chính thay vì End; là kết thúc của một chương trình con. Câu lệnh Begin của khối chương trình chính là nơi chương trình được bắt đầu thực thi. Các dòng trong (* ... *) sẽ bị bỏ qua bởi trình dịch và nó đã được đưa vào để thêm một bình luận hay chú thích trong chương trình.
-
-Lệnh Writeln (‘Hello, World!’); Sử dụng lệnh Writeln có sẵn trong Pascal để viết ra thông báo Hello, World! lên màn hình.
-Lệnh Readln: khác với hàm Readln thông thưởng đây là hàm giúp cho ct không bị tắt đơn giảng vậy
-
-Lệnh End cuối cùng chính là nơi chương trình kết thúc. 
-
-## 4.Một số câu lệnh cơ bản
-Ở chương trình trên lệnh Writeln(‘Hello, World!’); dùng để viết dòng chữ Hello, World! ra màn hình. Writeln là lệnh dùng để xuất dữ liệu trong Pascal với cú pháp như sau: 
-
-```c
-Writeln(<Text>);
+Cú pháp:
 ```
-Nhập vào dữ liệu 
-```c
-readln(<variables>);
+<kiểu dữ liệu> <tên biến>;
+```
+Ví dụ:
+```cpp
+int age;
+float weight;
+char gender;
+```
+### 1.2 Khai báo biến toàn cục
+Khai báo biến toàn cục được sử dụng để lưu trữ giá trị trong suốt chương trình. Biến toàn cục được khai báo bên ngoài tất cả các hàm và có thể được sử dụng bởi bất kỳ hàm nào trong chương trình.
+
+Cú pháp:
+```
+<kiểu dữ liệu> <tên biến>;
+```
+Ví dụ:
+```cpp
+int total_marks = 100;
+float PI = 3.14;
+char first_name[] = "John";
+```
+### 2. Gán giá trị cho biến
+Khi khai báo một biến, nó không có giá trị ban đầu. Tuy nhiên, ta có thể gán một giá trị cho biến bằng toán tử gán ( = ).
+
+Ví dụ:
+```cpp
+int n; 
+n = 10; //gán giá trị 10 cho biến n
+```
+### 3. Hiển thị giá trị của biến
+Để hiển thị giá trị của một biến, ta sử dụng lệnh cout.
+
+Ví dụ:
+```cpp
+int n = 10;
+cout << n << endl; //hiển thị giá trị của biến n ra màn hình
 ```

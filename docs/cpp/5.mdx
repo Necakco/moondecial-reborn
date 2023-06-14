@@ -1,85 +1,53 @@
 ---
 sidebar_position: 1
 ---
-# Starter
+# Toán tử
+cpp
 
-Khởi Đầu Pascal   
 
-```cpp
-program hello;
-uses crt;
-begin
-	clrscr;
-	writeln('Hello World');
-readln
-end.
-```
+ Trong C++, toán tử là các ký hiệu được sử dụng để thực hiện các phép tính số học hoặc logic trên các toán hạng. Toán tử cũng có thể được sử dụng để thực hiện các phép gán giá trị, nhập và xuất dữ liệu, so sánh các giá trị và nhiều hoạt động khác.
 
-## 1.Pascal là gì ?
-Ngay từ khi còn ngồi trên ghế trường THCS thì các bạn học sinh cũng đã được tiếp xúc cùng với ngôn ngữ lập trình Pascal, tuy nhiên không phải ai cũng hiểu rõ về ngôn ngữ lập trình này.
+Các loại toán tử trong C++ được phân loại thành các nhóm sau:
 
-Pascal chính là ngôn ngữ về lập trình máy tính theo dạng lệnh được phát triển bởi vì giáo sư Niklaus Wirth ( ở trường đại học kĩ thuật Zurich – Thụy Sĩ). Và đặt tên đó là Pascal để tưởng nhớ nhà toán học và triết học nổi tiếng người Pháp: Blaise Pascal. Bài học dưới đây sẽ giúp cho các bạn hiểu rõ hơn về ngôn ngữ này và hiểu được lý do vì sao ngôn ngữ Pascal này lại được lựa chọn để đưa vào các chương trình phổ thông tới các bạn học sinh.
+### Toán tử Arithmetic (toán tử số học):
+Các toán tử này được sử dụng để thực hiện các phép tính cơ bản như cộng, trừ, nhân, chia, chia lấy phần dư và các phép tính liên quan đến số học.
 
-Pascal chính là ngôn ngữ lập trình đặc biệt rất thích hợp với kiểu lập trình cấu trúc và cấu trúc dữ liệu, ngôn ngữ lập trình này còn được đặt theo tên của nhà toán học và triết gia, nhà vật lý người Pháp của Blaise Pascal. Pascal được phát triển đúng theo khuôn mẫu của ngôn ngữ lập trình ALGOL 60. Wirth cũng đã phát triển một vài cải tiến cho ngôn ngữ lập trình này như một phần của những đề xuất ALGOL X, tuy nhiên chúng không được chấp nhận do đó ngôn ngữ Pascal để được phát triển riêng biệt và phát hành trong năm 1970.
+| Toán tử     | Miêu tả |
+| ----------- | ----------- |
+| +           | Cộng hai giá trị số học với nhau.     |
+| -  | Cộng hai giá trị số học với nhau.        |
+| * | Nhân hai giá trị số học với nhau. |
+| / | Chia hai giá trị số học cho nhau. |
+| % 	| Lấy phần dư khi chia hai giá trị số học cho nhau. |
 
-Pascal có đặc điểm
-+ Ngữ pháp và ngữ nghĩa khá đơn giản và có tính logic.
-+ Cấu trúc của chương trình rõ ràng, giao diện dễ hiểu.
-+ Dễ dàng sửa chữa, cải tiến.
+### Toán tử Logical (toán tử logic):
+Các toán tử này được sử dụng để thực hiện các phép tính logic và trả về một giá trị boolean true hoặc false.\
 
-## 2.Code Editer
-Pascal là một ngôn ngữ cỗ nên không có quá nhiều codeediter hỗ trợ - thì trong bài học này chúng ta sẽ sử dụng Sublime Text (Phiên bản khoa đang sài là v4) kết hợp với Pascal code editer phổ biến cho học sinh cấp THCS
+| Toán tử 	| Miêu tả |
+| --------- | -------- |
+| && 	| Phép AND logic - Trả về true nếu cả hai toán hạng là true. | 
+| ! 	| Phép NOT logic - Đảo ngược giá trị của toán hạng từ true thành false và ngược lại. |
+|   \|\|  | Phép OR logic - Trả về true nếu ít nhất một toán hạng là true. |
 
-Đầu Tiên các bạn tải sublimeText trước cách Setup Theme và tiện ích mở rộng thì mình có giới thiệu trong Blog 
 
-Link : [Cách setup SublimeText để code Pascal](/create-a-page).
+### Toán tử Assignment (toán tử gán giá trị):
+Các toán tử này được sử dụng để gán giá trị của một biểu thức cho một biến.
 
-## 3.Cú Pháp
-Một chương trình Pascal về cơ bản bao gồm các phần sau đây: 
+| Toán tử | Miêu tả |
+| ------ | ----- |
+| = 	| Gán giá trị bên phải của biểu thức cho biến bên trái. | 
+| += 	| Tăng giá trị bên phải của biểu thức vào giá trị của biến bên trái và lưu kết quả. |  
+| -= 	| Giảm giá trị bên phải của biểu thức khỏi giá trị của biến bên trái và lưu kết quả. |
+| *= 	| Nhân giá trị bên phải của biểu thức với giá trị của biến bên trái và lưu kết quả. |
+| /= 	| Chia giá trị của biến bên trái cho giá trị bên phải của biểu thức và lưu kết quả. |
+| %= 	| Lấy phần dư khi chia giá trị của biến bên trái cho giá trị bên phải của biểu thức và lưu kết quả. |
 
-```cpp
-Program { tên của chương trình }
-Uses { khai báo các thư viện }
-Const { khai báo các hằng toàn cục }
-Var { khai báo các biến toàn cục }
+### Toán tử Comparison (toán tử so sánh):
+Các toán tử này được sử dụng để so sánh hai giá trị và trả về một giá trị boolean true hoặc false.
 
-{ khai báo hàm / thủ tục (nếu cần) }
-
-Begin { bắt đầu khối chương trình chính }
-...
-End. { kết thúc khối chương trình chính }
-
-```
-
-** ví dụ **
-```cpp
-program hello;
-uses crt;
-begin
-	clrscr;
-	writeln('Hello World');
-readln
-end.
-```
-
-Chúng ta hãy phân tích các thành phần của chương trình trên:
-
-Dòng đầu tiên Program Hello_World; Cho biết tên của chương trình là Hello_World. Dòng thứ hai Uses CRT; Là một lệnh tiền xử lý, cho trình biên dịch biết là cần chèn các lệnh trong thư viện CRT vào (sẽ dùng các lệnh trong thư viện CRT) trước khi thực hiện biên dịch.
-
-Các dòng tiếp theo được đóng trong cặp Begin và End là khối chương trình chính. Mỗi khối trong Pascal được đóng trong cặp Begin và End. Tuy nhiên, End. cho biết đây là kết thúc của chương trình chính thay vì End; là kết thúc của một chương trình con. Câu lệnh Begin của khối chương trình chính là nơi chương trình được bắt đầu thực thi. Các dòng trong (* ... *) sẽ bị bỏ qua bởi trình dịch và nó đã được đưa vào để thêm một bình luận hay chú thích trong chương trình.
-
-Lệnh Writeln (‘Hello, World!’); Sử dụng lệnh Writeln có sẵn trong Pascal để viết ra thông báo Hello, World! lên màn hình.
-Lệnh Readln: khác với hàm Readln thông thưởng đây là hàm giúp cho ct không bị tắt đơn giảng vậy
-
-Lệnh End cuối cùng chính là nơi chương trình kết thúc. 
-
-## 4.Một số câu lệnh cơ bản
-Ở chương trình trên lệnh Writeln(‘Hello, World!’); dùng để viết dòng chữ Hello, World! ra màn hình. Writeln là lệnh dùng để xuất dữ liệu trong Pascal với cú pháp như sau: 
-
-```c
-Writeln(<Text>);
-```
-Nhập vào dữ liệu 
-```c
-readln(<variables>);
-```
+| Toán tử |	Miêu tả |
+| ---- | ---- |
+| == 	| Trả về true nếu các toán hạng bằng nhau. |
+| != 	| Trả về true nếu các toán hạng không bằng nhau. |
+| < 	| Trả về true nếu toán hạng bên trái nhỏ hơn toán hạng bên phải. |
+| > 	| Trả về true nếu toán hạng bên trái lớn |
