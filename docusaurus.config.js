@@ -9,18 +9,18 @@ const config = {
   title: "MoonDecial Reborn",
   tagline: "Nền Tảng Học trực tuyến",
   favicon: "img/logo.ico",
-  
+
   // Set the production url of your site here
   url: "https://base-moondecial.web.app/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
-  
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
-  
+
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
@@ -31,11 +31,11 @@ const config = {
     defaultLocale: "vi",
     locales: ["vi", "en"],
   },
-  
+
   // or, if you want to specify options:
-  
+
   // ...
-  
+
   presets: [
     [
       "classic",
@@ -74,41 +74,80 @@ const config = {
     ],
   ],
   themeConfig:
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-  ({
-    // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
-    navbar: {
-      title: "MoonDecial RB",
-      logo: {
-        alt: "My Site Logo",
-        src: "img/logo.png",
-      },
-      items: [
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Lập trình",
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      // Replace with your project's social card
+      image: "img/docusaurus-social-card.jpg",
+      navbar: {
+        title: "MoonDecial RB",
+        logo: {
+          alt: "My Site Logo",
+          src: "img/logo.png",
         },
-        
-        { to: "/blog", label: "Blog.dev", position: "left" },
-        { to: "/quizz", label: "Quizz", position: "left" },
-        { to: "/video", label: "Video", position: "left" },
-        {
-            href: "https://github.com/facebook/docusaurus",
-            label: "Lý Thuyết",
+
+        items: [
+          {
             position: "left",
+            label: "Learning",
+            items: [
+              {
+                href: "https://github.com/facebook/docusaurus",
+                label: "Lý Thuyết",
+              },
+              {
+                type: "docSidebar",
+                sidebarId: "tutorialSidebar",
+                label: "Lập trình",
+              },
+              { to: "/quizz", label: "Quizz" },
+              { to: "/video", label: "video" },
+            ],
           },
           {
-            href: "https://github.com/facebook/docusaurus",
-            label: "Mgpt",
             position: "left",
+            label: "Tool",
+            items: [
+              { to: "/docs/tool", label: "All Tool Here" },
+              {
+                href: "https://github.com/facebook/docusaurus",
+                label: "Mgpt",
+              },
+            ],
           },
+          {
+            position: "left",
+            label: "Blog",
+            items: [{ to: "/blog", label: "Blog.dev" }],
+          },
+          {
+            position: "left",
+            label: "Other",
+            items: [
+              {
+                href: "https://github.com/facebook/docusaurus",
+                label: "Admin",
+              },
+              {
+                href: "https://github.com/facebook/docusaurus",
+                label: "Suport Me pls 🥰",
+              },
+              { to: "/blog/sitemap", label: "SiteMap" },
+            ],
+          },
+
           {
             href: "https://github.com/facebook/docusaurus",
             label: "Discord",
             position: "right",
+          },
+          {
+            position: "right",
+            label: "Account",
+            items: [
+              { to: "/docs/tool", label: "Đổi Mật Khẩu" },
+              { to: "/docs/tool", label: "Bảo mật" },
+              { to: "/docs/tool", label: "Đăng Xuất" },
+            ],
           },
           {
             type: "localeDropdown",
@@ -182,12 +221,10 @@ const config = {
         },
       ],
     }),
-    markdown: {
-      mermaid: true,
-    },
-    themes: ['@docusaurus/theme-mermaid'],
-    
-  };
-  
-  module.exports = config;
-  
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
+};
+
+module.exports = config;
