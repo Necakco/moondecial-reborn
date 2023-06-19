@@ -9,18 +9,18 @@ const config = {
   title: "MoonDecial Reborn",
   tagline: "Nền Tảng Học trực tuyến",
   favicon: "img/logo.ico",
-
+  
   // Set the production url of your site here
   url: "https://base-moondecial.web.app/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
-
+  
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
-
+  
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
@@ -31,10 +31,11 @@ const config = {
     defaultLocale: "vi",
     locales: ["vi", "en"],
   },
-
+  
   // or, if you want to specify options:
-
+  
   // ...
+  
   presets: [
     [
       "classic",
@@ -73,28 +74,28 @@ const config = {
     ],
   ],
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
-      navbar: {
-        title: "MoonDecial RB",
-        logo: {
-          alt: "My Site Logo",
-          src: "img/logo.png",
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  ({
+    // Replace with your project's social card
+    image: "img/docusaurus-social-card.jpg",
+    navbar: {
+      title: "MoonDecial RB",
+      logo: {
+        alt: "My Site Logo",
+        src: "img/logo.png",
+      },
+      items: [
+        {
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "Lập trình",
         },
-        items: [
-          {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
-            position: "left",
-            label: "Lập trình",
-          },
-
-          { to: "/blog", label: "Blog.dev", position: "left" },
-          { to: "/quizz", label: "Quizz", position: "left" },
-          { to: "/video", label: "Video", position: "left" },
-          {
+        
+        { to: "/blog", label: "Blog.dev", position: "left" },
+        { to: "/quizz", label: "Quizz", position: "left" },
+        { to: "/video", label: "Video", position: "left" },
+        {
             href: "https://github.com/facebook/docusaurus",
             label: "Lý Thuyết",
             position: "left",
@@ -181,6 +182,12 @@ const config = {
         },
       ],
     }),
-};
-
-module.exports = config;
+    markdown: {
+      mermaid: true,
+    },
+    themes: ['@docusaurus/theme-mermaid'],
+    
+  };
+  
+  module.exports = config;
+  
