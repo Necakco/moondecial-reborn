@@ -138,6 +138,7 @@ const config = {
                 label: "Suport Me pls 🥰",
               },
               { to: "/blog/sitemap", label: "SiteMap" },
+              { to: "/shop", label: "Shop" },
             ],
           },
 
@@ -150,7 +151,7 @@ const config = {
             position: "right",
             label: "Account",
             items: [
-              { to: "/docs/tool", label: "Đổi Mật Khẩu" },
+              { to: "/admin", label: "Đổi Mật Khẩu" },
               { to: "/docs/tool", label: "Bảo mật" },
               { to: "/docs/tool", label: "Đăng Xuất" },
             ],

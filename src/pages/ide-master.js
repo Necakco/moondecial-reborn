@@ -44,7 +44,7 @@ export default function Home() {
           <iframe
             className="concak"
             width="100%"
-            src="https://khoalocxoay.github.io/ide-master/"
+            src="https://necakco.github.io/ide-master/"
             title=""
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
