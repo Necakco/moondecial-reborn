@@ -39,27 +39,17 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <div className="idkquizz">
-        <HomepageHeader />
+      <div className="kk">
         <main>
-          <div className="mainquizz">
-            <center>
-              <div className="flex-container">
-                <div className="conterse">
-                  <h1>Tự luyện</h1>
-                  <a className="button button--secondary button--ifm-color-primary-light">
-                    Start
-                  </a>
-                </div>
-                <div className="conterse">
-                  <h1>Thi online</h1>
-                  <a className="button button--secondary button--ifm-color-primary-light">
-                    Start
-                  </a>
-                </div>
-              </div>
-            </center>
-          </div>
+          <iframe
+            className="concak"
+            width="100%"
+            src="https://moondecialtintuc.releases.live"
+            title=""
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            allowfullscreen
+          ></iframe>
         </main>
       </div>
     </Layout>

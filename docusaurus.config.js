@@ -91,7 +91,7 @@ const config = {
             label: "Learning",
             items: [
               {
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://necakco.github.io/project/hoc-di-nhoc",
                 label: "Lý Thuyết",
               },
               {
@@ -99,7 +99,7 @@ const config = {
                 sidebarId: "tutorialSidebar",
                 label: "Lập trình",
               },
-              { to: "/quizz", label: "Quizz" },
+              { href: "https://necakco.github.io/project/quizz", label: "Quizz" },
               { to: "/video", label: "video" },
             ],
           },
@@ -110,6 +110,8 @@ const config = {
               { to: "/docs/tool", label: "All Tool Here" },
               { to: "/ide", label: "ide" },
               { to: "/ide-master", label: "ide-master" },
+              { to: "/note", label: "Ghi chú" },
+              { to: "/new", label: "New" },
               {
                 href: "https://github.com/facebook/docusaurus",
                 label: "Mgpt",
@@ -125,6 +127,10 @@ const config = {
             position: "left",
             label: "Other",
             items: [
+              {
+                href: "https://necakco.github.io/cssninja/",
+                label: "CSS NINJA",
+              },
               {
                 href: "https://github.com/facebook/docusaurus",
                 label: "Admin",
@@ -151,9 +157,9 @@ const config = {
             position: "right",
             label: "Account",
             items: [
-              { to: "/admin", label: "Đổi Mật Khẩu" },
+              { href: "https://moondecial-next.web.app/account", label: "Đăng Xuất" },
               { to: "/docs/tool", label: "Bảo mật" },
-              { to: "/docs/tool", label: "Đăng Xuất" },
+              { href: "https://moondecial-next.web.app/reset", label: "Đổi Mật Khẩu" },
             ],
           },
           {
